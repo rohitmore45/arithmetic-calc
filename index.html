@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        div {
+            width: 350px;
+            height: 370px;
+            text-align: center;
+            margin-top: 50px;
+            border-radius: 15px;
+            border: 2px solid black;
+            background-color:gainsboro;
+        }
+
+        input {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 18px;
+            outline: none;
+        }
+
+        button {
+            width: 40px; 
+            height: 30px;
+            margin-bottom: 15px;
+            background-color: aliceblue;
+            text-align: center;
+            font-size: 18px;
+        }
+        #clear-btn{
+            width: 100px;
+            background-color: beige;
+        }
+        @media (max-width : 725px){
+            div{
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>Calculate Your Values</h2>
+        <input type="text" id="firstnum" placeholder="First Number" autofocus><br>
+
+        <input type="text" id="secnum" placeholder="Second Number"><br>
+
+        <input type="text" id="result" readonly placeholder="Your Result"><br>
+
+        <button onclick="result.value =(+firstnum.value) + (+secnum.value)">+</button>
+        <button onclick="result.value=firstnum.value-secnum.value">-</button>
+        <button onclick="result.value=firstnum.value * secnum.value">*</button>
+        <button onclick="result.value = firstnum.value / secnum.value">/</button>
+        <button onclick="result.value=firstnum.value % secnum.value">%</button>
+        <button onclick="result.value=firstnum.value ** secnum.value">^</button><br>
+        <button onclick="result.value='',firstnum.value='',secnum.value=''" id="clear-btn">Clear</button>
+    </div>
+
+</body>
+
+</html>
